@@ -1,12 +1,12 @@
 import Header from "./features/layout/components/Header";
 import { Content } from "./features/layout/components/Content";
 import { Footer } from "./features/layout/components/Footer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Props from "./features/layout/components/Props";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
 
       <Routes>
@@ -15,7 +15,7 @@ function App() {
       </Routes>
 
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
