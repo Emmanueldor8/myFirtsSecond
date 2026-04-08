@@ -8,27 +8,30 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const Content = () => {
+  // 🔥 BASE AUTOMÁTICA (funciona local + GitHub Pages)
+  const base = import.meta.env.BASE_URL;
+
   const productos = [
     {
       id: 1,
       nombre: "Jordan 1",
       precio: 100,
       stock: 5,
-      imagen: "./img/jordan1.jpg",
+      imagen: `${base}img/jordan1.jpg`,
     },
     {
       id: 2,
       nombre: "Jordan 2",
       precio: 200,
       stock: 0,
-      imagen: "./img/jordan2.jpg",
+      imagen: `${base}img/jordan2.jpg`,
     },
     {
       id: 3,
       nombre: "Jordan 3",
       precio: 300,
       stock: 12,
-      imagen: "./img/jordan3.jpg",
+      imagen: `${base}img/jordan3.jpg`,
     },
   ];
 
@@ -42,6 +45,7 @@ export const Content = () => {
           {productos.map((producto) => (
             <div key={producto.id} className="card mb-3 shadow-sm">
               <div className="row g-0 align-items-center">
+                
                 {/* Imagen */}
                 <div className="col-md-4">
                   <img
@@ -64,13 +68,14 @@ export const Content = () => {
                         <h5 className="mb-1">{producto.nombre}</h5>
                         <p className="text-muted mb-1">${producto.precio}</p>
 
-                        {/* Estado de stock */}
                         {producto.stock > 0 ? (
                           <span className="badge bg-success">
                             En stock ({producto.stock})
                           </span>
                         ) : (
-                          <span className="badge bg-danger">Agotado</span>
+                          <span className="badge bg-danger">
+                            Agotado
+                          </span>
                         )}
                       </div>
 
@@ -98,6 +103,7 @@ export const Content = () => {
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
           ))}
