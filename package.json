@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://emmanueldor8.github.io/myfirstsecond/",
+  "homepage": "https://emmanueldor8.github.io/myFirtsSecond/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
