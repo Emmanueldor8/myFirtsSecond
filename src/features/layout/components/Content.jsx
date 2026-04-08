@@ -4,7 +4,7 @@ import {
   faCartPlus,
   faBroom,
   faPenToSquare,
-  faTrash
+  faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const Content = () => {
@@ -14,28 +14,27 @@ export const Content = () => {
       nombre: "Jordan 1",
       precio: 100,
       stock: 5,
-      imagen: "/img/jordan1.jpg",
+      imagen: "./img/jordan1.jpg",
     },
     {
       id: 2,
       nombre: "Jordan 2",
       precio: 200,
       stock: 0,
-      imagen: "/img/jorda2.jpg",
+      imagen: "./img/jordan2.jpg",
     },
     {
       id: 3,
       nombre: "Jordan 3",
       precio: 300,
       stock: 12,
-      imagen: "/img/jordan3.jpg",
+      imagen: "./img/jordan3.jpg",
     },
   ];
 
   return (
     <main className="container my-5">
       <div className="row">
-
         {/* ================= PRODUCTOS ================= */}
         <div className="col-md-8">
           <h4 className="mb-4">Productos</h4>
@@ -43,7 +42,6 @@ export const Content = () => {
           {productos.map((producto) => (
             <div key={producto.id} className="card mb-3 shadow-sm">
               <div className="row g-0 align-items-center">
-
                 {/* Imagen */}
                 <div className="col-md-4">
                   <img
@@ -61,13 +59,10 @@ export const Content = () => {
                 {/* Información */}
                 <div className="col-md-8">
                   <div className="card-body">
-
                     <div className="d-flex justify-content-between align-items-start">
                       <div>
                         <h5 className="mb-1">{producto.nombre}</h5>
-                        <p className="text-muted mb-1">
-                          ${producto.precio}
-                        </p>
+                        <p className="text-muted mb-1">${producto.precio}</p>
 
                         {/* Estado de stock */}
                         {producto.stock > 0 ? (
@@ -75,9 +70,7 @@ export const Content = () => {
                             En stock ({producto.stock})
                           </span>
                         ) : (
-                          <span className="badge bg-danger">
-                            Agotado
-                          </span>
+                          <span className="badge bg-danger">Agotado</span>
                         )}
                       </div>
 
@@ -103,10 +96,8 @@ export const Content = () => {
                         Agregar al carrito
                       </button>
                     </div>
-
                   </div>
                 </div>
-
               </div>
             </div>
           ))}
@@ -159,7 +150,6 @@ export const Content = () => {
             </div>
           </form>
         </div>
-
       </div>
     </main>
   );
